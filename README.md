@@ -110,7 +110,7 @@ Pi can reuse settings from an earlier installation, including extensions install
 
 In particular, **`@ollama/pi-web-search` conflicts with the included `pi-web-access`**: both register `web_search`. Before running setup, use `pi config` to disable the Ollama search extension (including any direct `index.ts` entry), or set `web` to `"skip"` in this repository's config if you prefer to keep it. Setup leaves competing extensions alone and explains the conflict rather than silently deleting them.
 
-Known package and direct-path conflicts stop setup before installation. Other extension-load failures are caught during verification and roll back setup's configuration changes. Project-specific extensions are not loaded by the isolated verification; check `.pi/settings.json` too if Pi fails only inside one project.
+Unfiltered known package and direct-path conflicts stop setup before installation. Packages with resource filters saved by `pi config` are checked by Pi during verification, so installed but disabled extensions are accepted. Other extension-load failures are caught during verification and roll back setup's configuration changes. Project-specific extensions are not loaded by the isolated verification; check `.pi/settings.json` too if Pi fails only inside one project.
 
 ## Verify and troubleshoot
 

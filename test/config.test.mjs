@@ -61,3 +61,11 @@ test('retired browser registration is removed on upgrade', () => {
   assert.equal(settings.packages.length, 12);
   assert.ok(!settings.packages.some(p => packageName(p) === 'pi-agent-browser-native'));
 });
+
+test('Pi config resource filters are verified by Pi rather than rejected by package name', () => {
+  const features = resolveFeatures({}, manifest);
+  for (const extensions of [['-index.ts'], ['!**/*'], ['+index.ts'], []]) {
+    assert.deepEqual(findConflicts({ packages: [{ source: 'npm:@ollama/pi-web-search', extensions }] }, features), []);
+  }
+  assert.deepEqual(findConflicts({ packages: ['npm:@ollama/pi-web-search'] }, features), ['@ollama/pi-web-search']);
+});
