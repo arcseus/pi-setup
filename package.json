@@ -1,0 +1,31 @@
+{
+  "name": "pi-setup",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "bash setup.sh",
+    "doctor": "node scripts/doctor.mjs",
+    "test": "node scripts/test.mjs"
+  },
+  "piSetup": {
+    "minPi": "1.5.2",
+    "minNode": "24.22.2",
+    "browser": "agent-browser@0.42.0",
+    "features": {
+      "planning": "npm:@narumitw/pi-plan-mode@0.60.0",
+      "subagents": "npm:@gotgenes/pi-subagents@25.0.5",
+      "permissions": "npm:@gotgenes/pi-permission-system@42.0.0",
+      "web": "npm:pi-web-access@0.47.0",
+      "questions": "npm:@juicesharp/rpiv-ask-user-question@2.15.0",
+      "history": "npm:pi-workspace-history@0.5.2",
+      "background": "npm:pi-bg-bash@0.6.0",
+      "sideQuestions": "npm:@narumitw/pi-btw@0.63.7",
+      "worktrees": "npm:@narumitw/pi-worktree@0.51.9",
+      "todos": "npm:@juicesharp/rpiv-todo@2.15.0",
+      "codeIntelligence": "npm:pi-lens@4.4.12",
+      "visualPlans": "npm:@plannotator/pi-extension@0.28.61",
+      "browser": "npm:pi-agent-browser-native@0.9.18"
+    }
+  }
+}

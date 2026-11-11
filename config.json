@@ -1,0 +1,17 @@
+{
+  "features": {
+    "planning": "install",
+    "subagents": "install",
+    "permissions": "install",
+    "web": "install",
+    "questions": "install",
+    "history": "install",
+    "background": "install",
+    "sideQuestions": "install",
+    "worktrees": "install",
+    "todos": "install",
+    "codeIntelligence": "install",
+    "visualPlans": "install",
+    "browser": "install"
+  }
+}

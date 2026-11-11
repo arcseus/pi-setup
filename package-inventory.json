@@ -1,0 +1,824 @@
+{
+  "research_date": "2026-11-11",
+  "scope": "Latest OpenCode CLI versus a proposed curated upstream Pi installation",
+  "validation": "Public documentation, published npm metadata, and selected source inspection only. No packages installed or executed. No combined-profile or live-model tests.",
+  "compatibility_certified": false,
+  "popularity_caveat": "Catalog download counts are approximate snapshots, may have differing cache dates, and are not unique users or quality scores.",
+  "reproducibility_caveat": "Direct versions and tarball integrity do not freeze ranged transitive dependencies.",
+  "core_versions": [
+    {
+      "name": "@earendil-works/pi-coding-agent",
+      "version": "1.5.2",
+      "engines": {
+        "node": ">=22.19.0"
+      },
+      "repository": {
+        "url": "git+https://github.com/earendil-works/pi.git",
+        "type": "git",
+        "directory": "packages/coding-agent"
+      },
+      "dist": {
+        "shasum": "26300ab187a9b5a6db0efc8dd4d41a6c6bfcd610",
+        "tarball": "https://registry.npmjs.org/@earendil-works/pi-coding-agent/-/pi-coding-agent-1.5.2.tgz",
+        "fileCount": 1324,
+        "integrity": "sha512-mUWI04rqF1Vd/m1q+Ps1XeWsTXEVvRUnsmRa83I3Dzua0Tx5bYS93imeqtIfrXf7PkkaR6ERz+AuQhIJlom5yA==",
+        "signatures": [
+          {
+            "sig": "MEUCIQDg5Siff0VfBKODRmuTOsHXZnMUGf8hxN0L47dGJ5Gv5wIgLWSnnmNeZtStOWrVsUYGQHVeoOZ3tEtJSA1OLoKDWWU=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEQCIFV/jXPSarV579vojmCxg9nSCnCmE8pV/wvlhrMFXL83AiAOZeRtCBicsjbgTFTkifTitDvGUxeJ7T3wuKypjbMStQ==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/@earendil-works%2fpi-coding-agent@1.5.2",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 24401012
+      }
+    },
+    {
+      "name": "@opencode/cli",
+      "version": "2.2.7",
+      "engines": null,
+      "repository": {
+        "url": "git+https://github.com/anomalyco/opencode.git",
+        "type": "git"
+      },
+      "dist": {
+        "shasum": "8e3b0af64fd3f77b645a93399f5179c86cfe4bbf",
+        "tarball": "https://registry.npmjs.org/@opencode/cli/-/cli-2.2.7.tgz",
+        "fileCount": 3,
+        "integrity": "sha512-qsSExDfpUCqhGXBqZ8xhjg2OG9DxnsnfWl1/7vGINRWw7sxZvK9cXeW6MI8j9e+GItaYtg94zH3Eo2ng86VLCg==",
+        "signatures": [
+          {
+            "sig": "MEUCIBLCibnEBiRDdYz+dtXTbSRP+jmAL8UuB3vLV1NtT9qhAiEAg5fQsr8+Y/mKd1gNDxn23UI9fNnJNqK7qglXZoRymLU=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEUCIELFaapHLzpAItDR6g6LYUgAhDUgY4bgCxxUJ6cJejcEAiEA9fyaNj53ZcgTF5hoXkTvSa4jvR0j3OkG7Yfj4Ro7pVg=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/@opencode%2fcli@2.2.7",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 8175
+      }
+    }
+  ],
+  "packages": [
+    {
+      "name": "pi-subagents",
+      "version": "0.88.0",
+      "proposed_source": "npm:pi-subagents@0.88.0",
+      "disposition": "candidate",
+      "purpose_and_caveat": "Delegation; child permission integration must be verified",
+      "metadata_url": "https://registry.npmjs.org/pi-subagents/latest",
+      "catalog_url": "https://pi.dev/packages/pi-subagents",
+      "observed_catalog_monthly_downloads": 887857,
+      "engines": null,
+      "peerDependencies": {
+        "typebox": "*",
+        "@earendil-works/pi-ai": ">=1.2.0",
+        "@earendil-works/pi-tui": "*",
+        "@earendil-works/pi-agent-core": "*",
+        "@earendil-works/pi-coding-agent": "*"
+      },
+      "license": "MIT",
+      "repository": {
+        "url": "git+https://github.com/nicobailon/pi-subagents.git",
+        "type": "git"
+      },
+      "dist": {
+        "shasum": "0b44d0f35a9f8da8033451a5677b4cfff3a53194",
+        "tarball": "https://registry.npmjs.org/pi-subagents/-/pi-subagents-0.88.0.tgz",
+        "fileCount": 799,
+        "integrity": "sha512-Hc7GT36HTU1IsT/MPQbxnqmA90G1tfWJMFrxZ6ISURadGaIx7uad/qzkwL4epgBYRUMB7KOB9r+8k8YhXKP1lw==",
+        "signatures": [
+          {
+            "sig": "MEUCIDgK6hXY3z7jURIU4WmnV5w+5fkldPNn07FlOL66MbD7AiEA4d4Z2IROFdo/z3PERmODnef0Z040Z53o1LW5aQYol7Y=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEYCIQDg2yUAeX3El72h8Zz1mzf0iDTDgZlY7e6DaGEf8D+qxAIhAPd4imFFtDLBXtTveI8pycHulEG84WAx1Zb7tAc2kqpR",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/pi-subagents@0.88.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 11247659
+      }
+    },
+    {
+      "name": "pi-web-access",
+      "version": "0.47.0",
+      "proposed_source": "npm:pi-web-access@0.47.0",
+      "disposition": "candidate",
+      "purpose_and_caveat": "Web search and fetch; choose approved routing",
+      "metadata_url": "https://registry.npmjs.org/pi-web-access/latest",
+      "catalog_url": "https://pi.dev/packages/pi-web-access",
+      "observed_catalog_monthly_downloads": 1317504,
+      "engines": {
+        "node": ">=22.19.0"
+      },
+      "peerDependencies": {
+        "typebox": "*",
+        "@earendil-works/pi-ai": "*",
+        "@earendil-works/pi-tui": "*",
+        "@earendil-works/pi-coding-agent": "*"
+      },
+      "license": "MIT",
+      "repository": {
+        "url": "git+https://github.com/nicobailon/pi-web-access.git",
+        "type": "git"
+      },
+      "dist": {
+        "shasum": "2d1f1be47e940beb772ca090db07b7084b48f6a4",
+        "tarball": "https://registry.npmjs.org/pi-web-access/-/pi-web-access-0.47.0.tgz",
+        "fileCount": 111,
+        "integrity": "sha512-Z176wTJjHw9Y+NpZ3WxOmKnh/7Sy3mu4QR05nBS/v6GRd5Cp7g5GnLIzI9LOT1IdR1105qXFS+L3LBUfkOMy8g==",
+        "signatures": [
+          {
+            "sig": "MEQCICRAaT3k8kTva4EOd0+jj2d9Il8hFJz2OHpWslJROHTgAiAguqT89/zjZNYF0hZYZFcoWe9G+UCVxLAdgkSE3Lie8Q==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEUCIQCx9PffC85mHpOqPGrpH4bsWkKdb/AjyHZ53qLPWcU0BgIgeXMqI76sLqOsZw/B2SiIIx4Vokn7MoFEbk0AjTaWAKs=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 10641123
+      }
+    },
+    {
+      "name": "@gotgenes/pi-permission-system",
+      "version": "42.0.0",
+      "proposed_source": "npm:@gotgenes/pi-permission-system@42.0.0",
+      "disposition": "candidate",
+      "purpose_and_caveat": "Human permission gates; parent and child coverage must be verified",
+      "metadata_url": "https://registry.npmjs.org/@gotgenes/pi-permission-system/latest",
+      "catalog_url": "https://pi.dev/packages/@gotgenes/pi-permission-system",
+      "observed_catalog_monthly_downloads": 45716,
+      "engines": {
+        "node": ">=22"
+      },
+      "peerDependencies": {
+        "@earendil-works/pi-tui": ">=1.0.0",
+        "@earendil-works/pi-coding-agent": ">=1.0.0"
+      },
+      "license": "MIT",
+      "repository": {
+        "url": "git+https://github.com/gotgenes/pi-packages.git",
+        "type": "git",
+        "directory": "packages/pi-permission-system"
+      },
+      "dist": {
+        "shasum": "ee87028fdc232a4d50aac4401dc206e08b9ddf78",
+        "tarball": "https://registry.npmjs.org/@gotgenes/pi-permission-system/-/pi-permission-system-42.0.0.tgz",
+        "fileCount": 201,
+        "integrity": "sha512-imhOymTbnj1iqnJDujqtnp79Su63PyQ+SAP0UqooC2E9yL9HzP/ISYTYkthvhq2aNbwTPBZZSjqI3jBdvmZ7ZQ==",
+        "signatures": [
+          {
+            "sig": "MEUCIQD0CxKHHXkUxzgCNfKR+Erk6ynziBKIGdr9bCmtgKyXXQIgN2cnZgfmD3wHHiPQctMTL98+sWRTJot8AsPbf6avYIw=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEYCIQCbLGeD1yVxHwE5/x94prOGhjh3KZ8CKzINomnRIStcpAIhALLijspQl0Y7BmZT4lxaQYxgJSuhbSSbPRNOnW2wmxaW",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/@gotgenes%2fpi-permission-system@42.0.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 2063607
+      }
+    },
+    {
+      "name": "@narumitw/pi-plan-mode",
+      "version": "0.60.0",
+      "proposed_source": "npm:@narumitw/pi-plan-mode@0.60.0",
+      "disposition": "candidate",
+      "purpose_and_caveat": "Terminal planning workflow",
+      "metadata_url": "https://registry.npmjs.org/@narumitw/pi-plan-mode/latest",
+      "catalog_url": "https://pi.dev/packages/@narumitw/pi-plan-mode",
+      "observed_catalog_monthly_downloads": 30490,
+      "engines": null,
+      "peerDependencies": {
+        "@earendil-works/pi-tui": "*",
+        "@earendil-works/pi-coding-agent": "*"
+      },
+      "license": "MIT",
+      "repository": {
+        "url": "git+https://github.com/narumiruna/pi-extensions.git",
+        "type": "git",
+        "directory": "packages/pi-plan-mode"
+      },
+      "dist": {
+        "shasum": "e6bdb199837ac4ebd3f4c2119740a1934ed8ddbc",
+        "tarball": "https://registry.npmjs.org/@narumitw/pi-plan-mode/-/pi-plan-mode-0.60.0.tgz",
+        "fileCount": 48,
+        "integrity": "sha512-ea+KiLQo4P3tn5Orp/l8sdsvSXjq+Ws3032hakwh9bse0TkONjDpAXPrgww2ppL9XE1jE1kson6jr0jHxpD1kQ==",
+        "signatures": [
+          {
+            "sig": "MEUCIQDWwBqEUjleuncTgk2eHJIj0sLFr/57fg0wVwnnOmRlIQIgW1y4c3II3YVHTR/oa6CXoqLkcjLcc+NRwS/l6R+LVDM=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEUCIEmGT9dmromMT3jeq7oqm3BvyEfDvr36yUQU9L8HZssiAiEAz7ZObOE/IevT6s7pE2QnltM1dpTQm2rjhyXnHPEBPqo=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/@narumitw%2fpi-plan-mode@0.60.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 1101112
+      }
+    },
+    {
+      "name": "@juicesharp/rpiv-ask-user-question",
+      "version": "2.15.0",
+      "proposed_source": "npm:@juicesharp/rpiv-ask-user-question@2.15.0",
+      "disposition": "candidate",
+      "purpose_and_caveat": "General structured questions",
+      "metadata_url": "https://registry.npmjs.org/@juicesharp/rpiv-ask-user-question/latest",
+      "catalog_url": "https://pi.dev/packages/@juicesharp/rpiv-ask-user-question",
+      "observed_catalog_monthly_downloads": 177697,
+      "engines": null,
+      "peerDependencies": {
+        "typebox": "*",
+        "@juicesharp/rpiv-i18n": "*",
+        "@earendil-works/pi-tui": "*",
+        "@earendil-works/pi-coding-agent": "*"
+      },
+      "license": "MIT",
+      "repository": {
+        "url": "git+https://github.com/juicesharp/rpiv-mono.git",
+        "type": "git",
+        "directory": "packages/rpiv-ask-user-question"
+      },
+      "dist": {
+        "shasum": "5e3edf96a8d4d7a8c1d4b537cda25e751ce8f570",
+        "tarball": "https://registry.npmjs.org/@juicesharp/rpiv-ask-user-question/-/rpiv-ask-user-question-2.15.0.tgz",
+        "fileCount": 64,
+        "integrity": "sha512-Gm6de5IZF52BaSeh9dnDqJBn821Z5XfJkCmhkCmqTzvNv3SCpSv1mA4Gj5VBcfrSe+xTtWSVQzJwIqJFQHH3Lg==",
+        "signatures": [
+          {
+            "sig": "MEUCIH/IPOHNjb2PbQW+t2NBokYI+N1RCTfeAf408yM6QsQcAiEAvlMkaSZngZnFM4/DLwI2ATidTrUUJIzjQI5uJnoya0I=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEYCIQCAOXteIkkMLHwAWw2q+fkWuioIuJXfnWwBrwsmE1MGfwIhANPIaUBaGRwAtwBggKs27JWwRAif7fnAAVID5nyp424M",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 343169
+      }
+    },
+    {
+      "name": "@juicesharp/rpiv-todo",
+      "version": "2.15.0",
+      "proposed_source": "npm:@juicesharp/rpiv-todo@2.15.0",
+      "disposition": "optional",
+      "purpose_and_caveat": "Visible task list",
+      "metadata_url": "https://registry.npmjs.org/@juicesharp/rpiv-todo/latest",
+      "catalog_url": "https://pi.dev/packages/@juicesharp/rpiv-todo",
+      "observed_catalog_monthly_downloads": 99092,
+      "engines": null,
+      "peerDependencies": {
+        "typebox": "*",
+        "@earendil-works/pi-ai": "*",
+        "@juicesharp/rpiv-i18n": "*",
+        "@earendil-works/pi-tui": "*",
+        "@earendil-works/pi-coding-agent": "*"
+      },
+      "license": "MIT",
+      "repository": {
+        "url": "git+https://github.com/juicesharp/rpiv-mono.git",
+        "type": "git",
+        "directory": "packages/rpiv-todo"
+      },
+      "dist": {
+        "shasum": "d614cedc77fd57e8d2bd1da5c55994a1881b38d7",
+        "tarball": "https://registry.npmjs.org/@juicesharp/rpiv-todo/-/rpiv-todo-2.15.0.tgz",
+        "fileCount": 32,
+        "integrity": "sha512-8WfYssdgQgSWzFNsRzdw5Z6ZJIjO2ecM/YqEzYpR/ore+Hh5aNmafGVy94uFbIofAv2wGGitx5e3J/ucRrViXQ==",
+        "signatures": [
+          {
+            "sig": "MEYCIQC8t9lgLpupBxSr26hmt5Qoe/skV504coxqPS3pzvUpvgIhANU8zvk7uqrGR+VXDMJYuiySwwr5N20aWf+UBai/key1",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEUCIHIyoRJnq1vVczzBbe8IsDkI9XZf4l2zsz5FkAk1BNqqAiEA0kL/DV+fDUdYGFJ9CHelBQDQpldqA4FvGaEswBhQf80=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 121018
+      }
+    },
+    {
+      "name": "pi-workspace-history",
+      "version": "0.5.2",
+      "proposed_source": "npm:pi-workspace-history@0.5.2",
+      "disposition": "candidate",
+      "purpose_and_caveat": "File and conversation undo/redo",
+      "metadata_url": "https://registry.npmjs.org/pi-workspace-history/latest",
+      "catalog_url": "https://pi.dev/packages/pi-workspace-history",
+      "observed_catalog_monthly_downloads": 3467,
+      "engines": {
+        "node": ">=22.19.0"
+      },
+      "peerDependencies": {
+        "@earendil-works/pi-tui": "*",
+        "@earendil-works/pi-coding-agent": "*"
+      },
+      "license": "MIT",
+      "repository": {
+        "url": "git+https://github.com/wcldyx/pi-workspace-history.git",
+        "type": "git"
+      },
+      "dist": {
+        "shasum": "3a5bbc1720fe5f430db778a458896b339a4d6da5",
+        "tarball": "https://registry.npmjs.org/pi-workspace-history/-/pi-workspace-history-0.5.2.tgz",
+        "fileCount": 7,
+        "integrity": "sha512-trJAFQetOpDl5G7CgpJsJWTDDd3OAOIMDnGtiMYxNetGPvzA+3oP3LoUOuOAFsR1UnwW1E8za2nQrXW+z+7ieg==",
+        "signatures": [
+          {
+            "sig": "MEYCIQDNPxjvRVH8FQXeYBMaiJgkI7/itoukUktLoONoBYsFIQIhAKNSgYciscUO2hCylxX3heJJzACj4tRzysUx5lpL0AQk",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEUCIGT1s4YHXPlsHGwFpcGKzym9ANN/BUGcyxNFWQewMrm1AiEAl7v/ATn1xEQq1Mbqq5Dsd9PHbvs2ki1DfznDDo5Qiz0=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 201815
+      }
+    },
+    {
+      "name": "pi-bg-bash",
+      "version": "0.6.0",
+      "proposed_source": "npm:pi-bg-bash@0.6.0",
+      "disposition": "candidate",
+      "purpose_and_caveat": "Background shell; macOS/Linux only",
+      "metadata_url": "https://registry.npmjs.org/pi-bg-bash/latest",
+      "catalog_url": "https://pi.dev/packages/pi-bg-bash",
+      "observed_catalog_monthly_downloads": 1185,
+      "engines": {
+        "node": ">=22.19.0"
+      },
+      "peerDependencies": {
+        "typebox": "*",
+        "@earendil-works/pi-tui": "*",
+        "@earendil-works/pi-coding-agent": ">=1.5.0"
+      },
+      "license": "MIT",
+      "repository": {
+        "url": "git+https://github.com/gvanderclay/pi-bg-bash.git",
+        "type": "git"
+      },
+      "dist": {
+        "shasum": "13f40de4ff90c64fdfbfe60c3acd658f5619adf5",
+        "tarball": "https://registry.npmjs.org/pi-bg-bash/-/pi-bg-bash-0.6.0.tgz",
+        "fileCount": 22,
+        "integrity": "sha512-MuTm1ujEuBV2VQu1LfoV72csHXPpQE3asUMzxbkfHuWFPTPn3xjklREZCVrwMHLBwNF6xYjGXccx9GTx9MGxsQ==",
+        "signatures": [
+          {
+            "sig": "MEQCIAg0wk6XElQgnsTht6EYXnrm4bp+5fzaZ0BbUbw94SP3AiBXeg69Y41AeKBvkmUEKm3TCfpyPz3fIWmULiRHYWMRlQ==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEUCIHI7eVVw9PKrlqYsPLvkrzdDvyMWVbEkGfbJrfKMNRhuAiEAtIuSvU8Uz/HwWTYmefeRuHMQOHtuUc9E2OfMeObNYjc=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/pi-bg-bash@0.6.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 176056
+      }
+    },
+    {
+      "name": "pi-lens",
+      "version": "4.4.12",
+      "proposed_source": "npm:pi-lens@4.4.12",
+      "disposition": "optional",
+      "purpose_and_caveat": "LSP, linters, formatters, and broader workflow policies",
+      "metadata_url": "https://registry.npmjs.org/pi-lens/latest",
+      "catalog_url": "https://pi.dev/packages/pi-lens",
+      "observed_catalog_monthly_downloads": 94486,
+      "engines": {
+        "node": ">=22.19.0"
+      },
+      "peerDependencies": {
+        "typebox": "^1.0.0",
+        "@earendil-works/pi-tui": "*",
+        "@earendil-works/pi-coding-agent": "*"
+      },
+      "license": "MIT",
+      "repository": {
+        "url": "git+https://github.com/apmantza/pi-lens.git",
+        "type": "git"
+      },
+      "dist": {
+        "shasum": "4eecd3e56f0b54c90a6965555af93ab3b7ef4869",
+        "tarball": "https://registry.npmjs.org/pi-lens/-/pi-lens-4.4.12.tgz",
+        "fileCount": 1252,
+        "integrity": "sha512-6bVSQDGT+p5peOnyJRGUhgiOuu6mHtE0klkX8+4hms2ZCW7CtmnPbCEs0TNKWq1k8+lF/Kem+/xmxY0mJQ3TIQ==",
+        "signatures": [
+          {
+            "sig": "MEYCIQCIN0HFhWlLS28REn50dENv5lH42m8pZCuj6tj5RPtTawIhANLs+NPaRJqePRVPwKMxaSDKbisyBPFZis0IWCGadWVH",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEUCIQDdZY6iQcWudrOnArk9gB8G8ZdprGROwtEuooLaMzG0FgIgblMKgPnmKuz233kSyv1kIPU17bikbeB79Y1W2gt+mW8=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/pi-lens@4.4.12",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 27290208
+      }
+    },
+    {
+      "name": "@narumitw/pi-lsp",
+      "version": "0.49.12",
+      "proposed_source": "npm:@narumitw/pi-lsp@0.49.12",
+      "disposition": "alternative",
+      "purpose_and_caveat": "Narrower language-server tools",
+      "metadata_url": "https://registry.npmjs.org/@narumitw/pi-lsp/latest",
+      "catalog_url": "https://pi.dev/packages/@narumitw/pi-lsp",
+      "observed_catalog_monthly_downloads": null,
+      "engines": null,
+      "peerDependencies": {
+        "typebox": "*",
+        "@earendil-works/pi-coding-agent": "*"
+      },
+      "license": "MIT",
+      "repository": {
+        "url": "git+https://github.com/narumiruna/pi-extensions.git",
+        "type": "git",
+        "directory": "packages/pi-lsp"
+      },
+      "dist": {
+        "shasum": "14c186761fc2401fd26e7fbc1c690b671c9ab058",
+        "tarball": "https://registry.npmjs.org/@narumitw/pi-lsp/-/pi-lsp-0.49.12.tgz",
+        "fileCount": 18,
+        "integrity": "sha512-odwv3NNK5pyq6gtslDF7FG9sfzQ8OHbu74wkG8F8bv3z4MJ3yx91HBcvMFGxFXYiJeAgF1V+uh/L35lACR/6EA==",
+        "signatures": [
+          {
+            "sig": "MEUCIBfpldO4Kg0efBPpPy7+YL9sRFL0NAPneSm2cOGUfUtXAiEA5RqI0+RPxYun245VA63hbvBr8c+GjfqxNDQMnY4hhtY=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEUCIQCl/GwnkwV84/z8GKXOFyewqAFgGLtNrcPz+MeLQzi28AIgDV/p73Hfsdfgb7COBYKfaFLWVp0YWxzDpBQSA+wVXzc=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/@narumitw%2fpi-lsp@0.49.12",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 270493
+      }
+    },
+    {
+      "name": "pi-btw",
+      "version": "0.8.1",
+      "proposed_source": "npm:pi-btw@0.8.1",
+      "disposition": "alternative",
+      "purpose_and_caveat": "Tool-enabled side agent by default; use /btw:ask for read-only",
+      "metadata_url": "https://registry.npmjs.org/pi-btw/latest",
+      "catalog_url": "https://pi.dev/packages/pi-btw",
+      "observed_catalog_monthly_downloads": null,
+      "engines": null,
+      "peerDependencies": {
+        "@earendil-works/pi-ai": ">=0.85.1 <2",
+        "@earendil-works/pi-tui": ">=0.85.1 <2",
+        "@earendil-works/pi-coding-agent": ">=0.85.1 <2"
+      },
+      "license": "MIT",
+      "repository": {
+        "url": "git+https://github.com/dbachelder/pi-btw.git",
+        "type": "git"
+      },
+      "dist": {
+        "shasum": "5ef98baecedbdb363631272c880603d43af6cdfa",
+        "tarball": "https://registry.npmjs.org/pi-btw/-/pi-btw-0.8.1.tgz",
+        "fileCount": 8,
+        "integrity": "sha512-Aol1JFiillvkAjtv4elc9sVg8Cb8XqIvEsPUMm4AD4csLELHrqvcRqCEJxAH4oLFYjxJ3uHO+sPYz1BD1B6o9A==",
+        "signatures": [
+          {
+            "sig": "MEYCIQCzSMmJN1/vBBx7YPdATqMCRT1Y1/tTldjmD8+SDR7iFgIhANz+e/MsNnjaw+HBewkFJPD7+mGlkvVPv2nTvO6pKqGA",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEUCIQD06HW8ZNzmXS9t+GAdLfDQ0ACHUehcl81GTHt2z+MVMQIgDOMfhO/WTGTfE4CA+dtWoTxj4DMHYDfagTHP9Gbntfw=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/pi-btw@0.8.1",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 398397
+      }
+    },
+    {
+      "name": "@narumitw/pi-worktree",
+      "version": "0.51.9",
+      "proposed_source": "npm:@narumitw/pi-worktree@0.51.9",
+      "disposition": "optional",
+      "purpose_and_caveat": "Interactive main-session worktree management",
+      "metadata_url": "https://registry.npmjs.org/@narumitw/pi-worktree/latest",
+      "catalog_url": "https://pi.dev/packages/@narumitw/pi-worktree",
+      "observed_catalog_monthly_downloads": null,
+      "engines": null,
+      "peerDependencies": {
+        "@earendil-works/pi-coding-agent": "*"
+      },
+      "license": "MIT",
+      "repository": {
+        "url": "git+https://github.com/narumiruna/pi-extensions.git",
+        "type": "git",
+        "directory": "packages/pi-worktree"
+      },
+      "dist": {
+        "shasum": "c2983fed1605c0ac19c3dcd7b07266333815d74f",
+        "tarball": "https://registry.npmjs.org/@narumitw/pi-worktree/-/pi-worktree-0.51.9.tgz",
+        "fileCount": 13,
+        "integrity": "sha512-jixYjmEZGIZn215MHquXa8nPfd/gpWfVNi1BtbKhvd8R4muRR3+f0fEBRKoBPIdJAHiMbHxycVemAPX0aZWW7Q==",
+        "signatures": [
+          {
+            "sig": "MEQCIBU6NxMODTqAc8vE6MZxTFpFQqcUWaFM/Bz1HxKqXJhIAiAF4BShu75mKbyXK+Wqm3og7dFDAwFXTmQicR38KYoXBg==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEQCIEmwIGRIc6wPZ9xDWm2t+iIBXu/FfoI0X9HMftCjd1zLAiAYQGnDYDKzfl7ubFYiHB6hWniixACr+B4K27Glb3NWUw==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/@narumitw%2fpi-worktree@0.51.9",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 309798
+      }
+    },
+    {
+      "name": "@plannotator/pi-extension",
+      "version": "0.28.61",
+      "proposed_source": "npm:@plannotator/pi-extension@0.28.61",
+      "disposition": "optional",
+      "purpose_and_caveat": "Browser-based plan review and annotation",
+      "metadata_url": "https://registry.npmjs.org/@plannotator/pi-extension/latest",
+      "catalog_url": "https://pi.dev/packages/@plannotator/pi-extension",
+      "observed_catalog_monthly_downloads": 95206,
+      "engines": null,
+      "peerDependencies": {
+        "@earendil-works/pi-coding-agent": ">=0.79.1"
+      },
+      "license": "MIT OR Apache-2.0",
+      "repository": {
+        "url": "git+https://github.com/backnotprop/plannotator.git",
+        "type": "git",
+        "directory": "apps/pi-extension"
+      },
+      "dist": {
+        "shasum": "8129660d9879fae831bd4f62235485241ecc3a87",
+        "tarball": "https://registry.npmjs.org/@plannotator/pi-extension/-/pi-extension-0.28.61.tgz",
+        "fileCount": 357,
+        "integrity": "sha512-uVfGaEiWo58hIsJ/yQcppq+z6lsG8g46P853iAiBT+y8WN0msBSU90VZfYHBKVkRUsS76hVhAnrXODiKWO4AjA==",
+        "signatures": [
+          {
+            "sig": "MEQCIFCx6TfEOduMf0P1G05TKMAdGQDXrqm79S5xoeT6a3oSAiBq+vydsXzW1WcVcVxS/eYjMdBtyc0XIhctAW4WPNSNAg==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEYCIQDZW6502YRonFw/A6uBobEexQ+JALQlI1mZkx+pkbp4cQIhAOtWhpGW/LciB6WdS/E6Gc+Iifr45z/K4DjU+fVXM8HG",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/@plannotator%2fpi-extension@0.28.61",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 53182777
+      }
+    },
+    {
+      "name": "pi-permission-modes",
+      "version": "2.7.2",
+      "proposed_source": "npm:pi-permission-modes@2.7.2",
+      "disposition": "alternative",
+      "purpose_and_caveat": "Combined permission modes and tool sandboxing; do not stack unreviewed",
+      "metadata_url": "https://registry.npmjs.org/pi-permission-modes/latest",
+      "catalog_url": "https://pi.dev/packages/pi-permission-modes",
+      "observed_catalog_monthly_downloads": 2864,
+      "engines": {
+        "node": ">=22.12.0"
+      },
+      "peerDependencies": {
+        "@earendil-works/pi-ai": "*",
+        "@earendil-works/pi-tui": "*",
+        "@earendil-works/pi-coding-agent": "*"
+      },
+      "license": "MIT",
+      "repository": {
+        "url": "git+https://github.com/wynainfo/pi-permission-modes.git",
+        "type": "git"
+      },
+      "dist": {
+        "shasum": "76c4aaa4ffe990360e8e41a134f3d722aaef7a94",
+        "tarball": "https://registry.npmjs.org/pi-permission-modes/-/pi-permission-modes-2.7.2.tgz",
+        "fileCount": 46,
+        "integrity": "sha512-pIl9wq6K+npPIpgihc7LHMjFryn9xUu6B/vdTNeP4LdceR9rfJQ5nKFzY/E+363y+B4PAS8hgtNEwknJFN13+Q==",
+        "signatures": [
+          {
+            "sig": "MEUCIGovY9x4sMmDU4RDG79CqrvzCIJw9VWK02wWSJSFzkWLAiEAo9+Cs3DqFHZ7pImx3UPqs3RLKMuP1KyVTmptpQUgqq8=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEUCIAmx7/cbOE6b8jgI3dfQyHLz5JKgKB0w+crzQe7QKikFAiEA2rkveZx49n0kBdQycOmCHeuLreIzdk41wb9EWE2nNaE=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 688085
+      }
+    },
+    {
+      "name": "pi-agent-browser-native",
+      "version": "0.9.18",
+      "proposed_source": "npm:pi-agent-browser-native@0.9.18",
+      "disposition": "optional",
+      "purpose_and_caveat": "Browser automation; higher Node runtime floor",
+      "metadata_url": "https://registry.npmjs.org/pi-agent-browser-native/latest",
+      "catalog_url": "https://pi.dev/packages/pi-agent-browser-native",
+      "observed_catalog_monthly_downloads": 23853,
+      "engines": {
+        "node": ">=24.21.0"
+      },
+      "peerDependencies": {
+        "typebox": "*",
+        "@earendil-works/pi-ai": "*",
+        "@earendil-works/pi-tui": "*",
+        "@earendil-works/pi-coding-agent": "*"
+      },
+      "license": "MIT",
+      "repository": {
+        "url": "git+https://github.com/fitchmultz/pi-agent-browser-native.git",
+        "type": "git"
+      },
+      "dist": {
+        "shasum": "906a826019553243abc0ef06fb13c60e56ca29e6",
+        "tarball": "https://registry.npmjs.org/pi-agent-browser-native/-/pi-agent-browser-native-0.9.18.tgz",
+        "fileCount": 53,
+        "integrity": "sha512-jblHV3IkPD+LlhLxmy7f2q/ZUTmJHmBS7ZTSb2XDsytHdNncbMCN1UlWbA/yRHoMWbB0ZwhL3L4w9sFjbKnWsQ==",
+        "signatures": [
+          {
+            "sig": "MEYCIQDrSadKyUymVqMijsUx+OWQL/3+KtNmSWkFap6gCazP1gIhALV+qSGYuEtAqsgliU/xlnD2zS+35o+yb08ZlyYzRVpl",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEQCIHlLXKEevLE/+JBVyNHa/IVdZEYlwSuuDOy7moBH5O/AAiABLY5k6elDJ/7Q2tZV2EXDOt2OPj9pw6j+SFeZGq6G4w==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/pi-agent-browser-native@0.9.18",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 3852154
+      }
+    },
+    {
+      "name": "pi-open-agents",
+      "version": "0.1.32",
+      "proposed_source": "npm:pi-open-agents@0.1.32",
+      "disposition": "alternative",
+      "purpose_and_caveat": "Primary and child agent management; overlaps subagent ownership",
+      "metadata_url": "https://registry.npmjs.org/pi-open-agents/latest",
+      "catalog_url": "https://pi.dev/packages/pi-open-agents",
+      "observed_catalog_monthly_downloads": 1576,
+      "engines": {
+        "node": ">=20"
+      },
+      "peerDependencies": {
+        "typebox": "*",
+        "@earendil-works/pi-ai": "*",
+        "@earendil-works/pi-tui": "*",
+        "@earendil-works/pi-coding-agent": "*"
+      },
+      "license": "MIT",
+      "repository": {
+        "url": "git+https://github.com/andrea-tomassi/pi-open-agents.git",
+        "type": "git"
+      },
+      "dist": {
+        "shasum": "d5976afb73226ab6cf8f17b478fef68c65a4ae65",
+        "tarball": "https://registry.npmjs.org/pi-open-agents/-/pi-open-agents-0.1.32.tgz",
+        "fileCount": 28,
+        "integrity": "sha512-Skj624SFRG6PlEcz6tpZmuV14hVWy4B7M6BRFzVSd6j/dHv8xctrWttRIlz3SgB0OO8ViMmJqiC1MBZfeNX4Dw==",
+        "signatures": [
+          {
+            "sig": "MEUCIBBhhF3k3Kt11q/XNv56Dy4WlV3ZOa42WEnLJZ+9k/H9AiEA8vlOSJsa8+HdXlnA2ECUQAJw3DXs/qqKlkAD6Zb0tv8=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEQCIENJbU8SMUIt79G2WK9s4PXyK4A95fcR43yHR70y4FixAiAxUMJdgt4wzxT002JPFoi87Jh0E6ZSc5ceCTumeAtYPw==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/pi-open-agents@0.1.32",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 206957
+      }
+    },
+    {
+      "name": "pi-background-tasks",
+      "version": "2.6.10",
+      "proposed_source": "npm:pi-background-tasks@2.6.10",
+      "disposition": "hold",
+      "purpose_and_caveat": "Published host peer ranges exclude Pi 1.5.2; runtime behavior untested",
+      "metadata_url": "https://registry.npmjs.org/pi-background-tasks/latest",
+      "catalog_url": "https://pi.dev/packages/pi-background-tasks",
+      "observed_catalog_monthly_downloads": 23762,
+      "engines": {
+        "node": ">=22.19.0"
+      },
+      "peerDependencies": {
+        "typebox": "*",
+        "@earendil-works/pi-ai": "*",
+        "@earendil-works/pi-tui": "^0.81.1 || ^0.82.1 || ^0.83.0 || ^0.84.0",
+        "@earendil-works/pi-coding-agent": "^0.81.1 || ^0.82.1 || ^0.83.0 || ^0.84.0"
+      },
+      "license": "ISC",
+      "repository": {
+        "url": "git+https://github.com/ismailsaleekh/pi-background-tasks.git",
+        "type": "git"
+      },
+      "dist": {
+        "shasum": "4e92b160144a2a600563f104b6b214e05a5f69a8",
+        "tarball": "https://registry.npmjs.org/pi-background-tasks/-/pi-background-tasks-2.6.10.tgz",
+        "fileCount": 246,
+        "integrity": "sha512-ank/oCRst44FVCr4zwDvedzAxpf+Ttmm4XwB9SfKFJtvFWWX9T2YC+g2pWCdQnbGy/4X+BgoSr6YFCW+fWuhSw==",
+        "signatures": [
+          {
+            "sig": "MEUCIFL2IGHxKYEIZVN5wpFG0ctPLKcKaQBih6H03EI4npDdAiEAs87zO1+DT1ORZBvvJ+aAOZ64nmRbFhW0N7t1r0qpKiI=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEQCIFvNabseAYt7B6S5G3mF0uPE68qM1ZH2/Fs4W9jZpbx1AiBgSRFsPvGZnxGXfR9QCeC85I/pwg/vfY/YnaeZ8C53/g==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 6120193
+      }
+    }
+  ],
+  "additional_documented_alternative": {
+    "name": "@narumitw/pi-btw",
+    "observed_version": "0.63.7",
+    "observed_catalog_monthly_downloads": 20900,
+    "catalog_url": "https://pi.dev/packages/@narumitw/pi-btw",
+    "note": "Catalog/documentation inspected; published npm manifest not fetched in this research. Choose one /btw owner."
+  }
+}
