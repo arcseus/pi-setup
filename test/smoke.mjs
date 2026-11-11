@@ -21,7 +21,6 @@ await mkdir(cwd); await mkdir(agentDir);
 process.env.PI_CODING_AGENT_DIR = agentDir;
 process.env.XDG_CACHE_HOME = join(fixture, 'cache');
 process.env.XDG_STATE_HOME = join(fixture, 'state');
-process.env.PI_AGENT_BROWSER_CONFIG = join(agentDir, 'browser.json');
 const sdk = await import(pathToFileURL(join(runtime, 'dist/index.js')));
 const { AssistantMessageEventStream } = await import(pathToFileURL(resolve(runtime, '../pi-ai/dist/utils/event-stream.js')));
 const manifest = JSON.parse(await readFile(join(root, 'package.json'), 'utf8'));
@@ -33,7 +32,6 @@ await save(join(agentDir, 'settings.json'), settings);
 await save(join(agentDir, 'extensions/pi-permission-system/config.json'), {
   permission: { '*': 'allow', path: { '*': 'allow', '*.env': 'deny' }, bash: { '*': 'ask' }, external_directory: 'ask' },
 });
-await save(join(agentDir, 'browser.json'), {});
 execFileSync('git', ['init', '-q', cwd]);
 await writeFile(join(cwd, 'README.md'), 'Fixture\n');
 await writeFile(join(cwd, '.env'), 'fixture-secret');
@@ -90,10 +88,10 @@ try {
   } });
   assert.deepEqual(errors, [], 'all startup hooks must succeed');
   const tools = session.getActiveToolNames();
-  for (const name of ['subagent', 'web_search', 'fetch_content', 'ask_user_question', 'todo', 'lens_diagnostics', 'agent_browser', 'bash_output', 'codemode']) assert.ok(tools.includes(name), `${name} must be active`);
+  for (const name of ['subagent', 'web_search', 'fetch_content', 'ask_user_question', 'todo', 'lens_diagnostics', 'bash_output', 'codemode']) assert.ok(tools.includes(name), `${name} must be active`);
   const commands = session.extensionRunner.getRegisteredCommands().map(c => c.name);
   for (const name of ['plan', 'permission-system', 'undo', 'redo', 'bg', 'btw', 'worktree', 'todos', 'plannotator-review', 'mcp']) assert.ok(commands.includes(name), `${name} must be registered`);
-  console.log('PASS: all 13 extensions and native MCP/codemode load together');
+  console.log('PASS: all 12 extensions and native MCP/codemode load together');
 
   const denial = await session.extensionRunner.emitToolCall({ type: 'tool_call', toolName: 'read', toolCallId: 'secret-check', input: { path: join(cwd, '.env') } });
   assert.equal(denial?.block, true, 'secret reads must be denied');
